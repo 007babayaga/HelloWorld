@@ -5,6 +5,7 @@ public class Main {
         System.out.println(Arrays.toString(arrange(new int[]{3,4,56,8,1})));
         int[][] arrrr = new int[][]{{1,2,3},{1,2,3,4},{5,6,7}};
         System.out.println(Arrays.deepToString(arrrr));
+        System.out.println("hellp");
     }
     public static int[] arrange(int[] len){
         boolean flag = true;
@@ -21,6 +22,7 @@ public class Main {
             }
         }
         return len;
+
     }
 
 }
