@@ -2,15 +2,24 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-       int [] arr = new int[]{1,2,3,4,5,6,72};
-//        Random random = new Random();
-//        for(int i =0;i<arr.length;i++){
-//            arr[i]=random.nextInt(100);
-//        }
-        for(int i:arr){
-            System.out.print(i + " ");
+
+        System.out.println(Arrays.toString(aaaa(new int[]{4,5,7,89,34,1})));
+    }
+    public static int[] aaaa(int[] jj){
+        boolean flag = true;
+        int temp;
+        while (flag){
+            flag=false;
+            for(int i =0;i<jj.length-1;i++){
+                if(jj[i]<jj[i+1]){
+                    temp=jj[i];
+                    jj[i]=jj[i+1];
+                    jj[i+1]=temp;
+                    flag=true;
+                }
+            }
         }
-        System.out.println(Arrays.toString(arr));
+        return jj;
     }
 
 }
