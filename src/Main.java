@@ -2,26 +2,18 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-
-        System.out.println(Arrays.toString(aaaa(new int[]{4,5,7,89,34,1})));
-    }
-    public static int[] aaaa(int[] jj){
-        boolean flag = true;
+//        Roatate  An Array
+        int [] arr = new int[]{1,2,3,4,5};
+        int moves = arr.length/2;
+        int max = arr.length-1;
         int temp;
-        while (flag){
-            flag=false;
-            for(int i =0;i<jj.length-1;i++){
-                if(jj[i]<jj[i+1]){
-                    temp=jj[i];
-                    jj[i]=jj[i+1];
-                    jj[i+1]=temp;
-                    flag=true;
-                }
-            }
+        for(int i =0;i<moves;i++){
+            temp=arr[i];
+            arr[i] = arr[max-i];
+            arr[max-i]=temp;
         }
-        return jj;
+        System.out.println(Arrays.toString(arr));
     }
-
 }
 
 
